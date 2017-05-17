@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017. Gilang Ramadhan (gilangramadhan96.gr@gmail.com)
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#fff"
+    tools:context="id.codinate.appmahasiswa.LoginActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:text="LOGIN"
+        android:textColor="#000"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/edtEmail"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"
+        android:padding="8dp"
+        android:textColorHint="#000"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/edtPassword"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:padding="8dp"
+        android:textColorHint="#000"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textColor="#000"
+        android:background="#fff"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnLogin"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textColor="#000"
+        android:background="#fff"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnRegister"/>
+</LinearLayout>
