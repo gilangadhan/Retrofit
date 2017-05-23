@@ -1,22 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017. Gilang Ramadhan (gilangramadhan96.gr@gmail.com)
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context="id.codinate.appmahasiswa.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="TAMBAH DATA POHON"
+        android:textColor="#000"
+        android:textSize="25sp" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="ID"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <EditText
+        android:id="@+id/editjenis_pohon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Jenis Pohon"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <EditText
+        android:id="@+id/editusia_pohon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Usia Pohon"
+        android:inputType="number"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <AutoCompleteTextView
+        android:id="@+id/editkondisi_pohon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Kondisi Pohon"
+        android:inputType="text"
+        android:padding="8dp"
+        android:focusable="false"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <EditText
+        android:id="@+id/editlatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Latitude"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <EditText
+        android:id="@+id/editlongitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Longitude"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <EditText
+        android:id="@+id/editfoto_pohon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Foto Pohon"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <EditText
+        android:id="@+id/editketerangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Keterangan"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <Button
+        android:id="@+id/buttonSUBMIT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SUBMIT"
+        android:textColor="#000" />
+
+</LinearLayout>

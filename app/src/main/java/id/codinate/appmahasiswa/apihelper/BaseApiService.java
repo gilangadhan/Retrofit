@@ -26,5 +26,18 @@ public interface BaseApiService {
                                        @Field("password") String password,
                                        @Field("nama") String nama);
 
+    @FormUrlEncoded
+    @POST("insert.php")
+    Call<ResponseBody> insertPohon(@Field("id") String id,
+                                   @Field("uuid") String uuid,
+                                   @Field("jenis_pohon") String jenis_pohon,
+                                   @Field("usia_pohon") String usia_pohon,
+                                   @Field("kondisi_pohon") String kondisi_pohon,
+                                   @Field("latitude") String latitude,
+                                   @Field("longitude") String longitude,
+                                   @Field("foto_pohon") String foto_pohon,
+                                   @Field("keterangan") String keterangan
+    );
+
 
 }

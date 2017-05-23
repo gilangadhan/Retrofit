@@ -5,10 +5,10 @@
 	
 	$response = array("error" => FALSE);
 	
-	if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['nama'])){
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-		$nama = $_POST['nama'];
+	if(isset($_GET['email']) && isset($_GET['password']) && isset($_GET['nama'])){
+		$email = $_GET['email'];
+		$password = $_GET['password'];
+		$nama = $_GET['nama'];
 		
 		if($db->isUserExisted($email)){
 			$response["error"] = true;

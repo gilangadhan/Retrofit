@@ -6,9 +6,9 @@
 	
 	$response = array("error" => FALSE);
 	
-	if(isset($_POST['email']) && isset($_POST['password'])){
-		$email = $_POST['email'];
-		$password = $_POST['password'];
+	if(isset($_GET['email']) && isset($_GET['password'])){
+		$email = $_GET['email'];
+		$password = $_GET['password'];
 		
 		$user = $db->getUserByEmailAndPassword($email, $password);
 		if($user != false){

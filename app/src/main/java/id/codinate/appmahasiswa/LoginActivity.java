@@ -77,8 +77,10 @@ public class LoginActivity extends AppCompatActivity {
                                 if (jsonObject.getString("error").equals("false")){
                                     Toast.makeText(getApplicationContext(), "Berhasil Login", Toast.LENGTH_SHORT).show();
                                     String nama = jsonObject.getJSONObject("user").getString("nama");
+                                    String uuid = jsonObject.getString("uuid");
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     intent.putExtra("nama", nama);
+                                    intent.putExtra("uuid", uuid);
                                     startActivity(intent);
                                 } else {
                                     String error_msg = jsonObject.getString("error_msg");

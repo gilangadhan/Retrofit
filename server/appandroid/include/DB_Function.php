@@ -93,4 +93,25 @@ class DB_Function{
 		$hash= base64_encode(sha1($password.$salt, true).$salt);
 		return $hash;
 	}
+	
+	//function untuk menyimpan
+	public function simpanPohon($id,$uuid, $jenis_pohon, $usia_pohon,$kondisi_pohon, $latitude, $longitude, $foto_pohon, $keterangan, $tgl){
+		$stmt = $this->conn->prepare("
+		INSERT INTO `tbl_pohon` (`id`, `uuid`, `tgl`, `jenis_pohon`, `usia_pohon`, `kondisi_pohon`, `latitude`, `longitude`, `foto_pohon`, `keterangan`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("ssssssssss", $id,$uuid, $tgl, $jenis_pohon, $usia_pohon, $kondisi_pohon, $latitude, $longitude, $foto_pohon ,$keterangan);
+		$result = $stmt->execute();
+		$stmt->close();
+		
+		//cek jika sudah sukses
+		if($result){
+			$stmt= $this->conn->prepare("select * from tbl_pohon where id = ?");
+			$stmt->bind_param("s", $id);
+			$stmt->execute();
+			$user = $stmt->get_result()->fetch_assoc();
+			$stmt->close();
+			return $user;
+		}else{
+			return false;
+		}
+	}
 }

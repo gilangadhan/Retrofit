@@ -10,7 +10,7 @@ package id.codinate.appmahasiswa.apihelper;
 
 public class UtilsApi {
     // untuk koneksi localhost atau server
-    public static final  String BASE_URL_API = "http://192.168.43.233/appandroid/";
+    public static final  String BASE_URL_API = "http://192.168.1.5/appandroid/";
     //mendeklarasiakn interface BaseApiServece
     public static BaseApiService getApiService(){
         return RetrofitClient.getClient(BASE_URL_API).create(BaseApiService.class);
